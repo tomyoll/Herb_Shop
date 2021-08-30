@@ -1,0 +1,9 @@
+#PasswordField {
+-fx-prompt-text-fill: #8e9297;
+-fx-background-color: #2f3136;
+}
+
+.text-field {
+-fx-text-fill: #8e9297;
+}
+

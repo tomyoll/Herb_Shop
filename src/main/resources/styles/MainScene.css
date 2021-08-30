@@ -1,0 +1,64 @@
+.combo-box > .list-cell .text {
+-fx-fill: white;
+-fx-font-size: 13px;
+}
+
+.combo-box > .list-cell {
+-fx-alignment: center;
+}
+
+#Search_field
+{
+-fx-prompt-text-fill: #989898;
+-fx-faint-focus-color: transparent;
+-fx-focus-color: transparent;
+}
+
+.Search_button {
+-fx-background-color:  #31e981;
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+}
+.tool-bar > .tool-bar-overflow-button .arrow {
+
+}
+.stackPane {
+-fx-pref-width: 60px;
+-fx-pref-height: 30px;
+-fx-min-width: 60px;
+-fx-min-height: 30px;
+-fx-max-width: 60px;
+-fx-max-height: 30px;
+}
+
+#SearchLabel, #Structure_list, #category_list, #Action_list {
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: #2e3338;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #202225;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.context-menu {
+-fx-background-color: #36393f;
+}
+
+.menu-item:focused{
+-fx-background-color: #23272a;
+}
+
+.menu-button > .arrow-button > .arrow {
+	-fx-background-color: white;
+
+}
+
+

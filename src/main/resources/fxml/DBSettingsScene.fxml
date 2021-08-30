@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="ParentContainer" stylesheets="@../styles/AuthorizationScene.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tomyoll.Database.Configs">
+   <children>
+      <AnchorPane fx:id="MainPane" prefHeight="340.0" prefWidth="400.0" style="-fx-background-color: #36393f;" stylesheets="@../styles/ConfigsScene.css">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="76.0" prefHeight="240.0" prefWidth="276.0" spacing="25.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="HostField" style="-fx-background-color: #2f3136;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="PortField" style="-fx-background-color: #2f3136;" />
+                  <TextField fx:id="UserField" style="-fx-background-color: #2f3136;" />
+                  <TextField fx:id="PasswordField" prefWidth="268.0" promptText="Залиште пустим, якщо пароль не потрібен" style="-fx-background-color: #2f3136;" />
+                  <TextField fx:id="NameField" style="-fx-background-color: #2f3136;" />
+               </children>
+            </VBox>
+            <VBox layoutX="8.0" layoutY="7.0" prefHeight="240.0" prefWidth="99.0" spacing="30.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="HostLabel" text="Хост:" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="PortLabel" text="Порт:" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                   <Label fx:id="UserLabel" text="Користувач:" textFill="#8e9297">
+                       <font>
+                           <Font name="System Bold" size="15.0" />
+                       </font>
+                   </Label>
+                  <Label fx:id="PasswordLabel" text="Пароль:" textFill="#8e9297">
+                     <font>
+                         <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NameLabel" text="Ім'я БД:" textFill="#8e9297">
+                     <font>
+                         <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="ConnectButton" layoutX="14.0" layoutY="247.0" mnemonicParsing="false" onAction="#TryConnect" prefHeight="39.0" prefWidth="112.0" style="-fx-background-color: #2f3136;" text="З'єднатись" textFill="#ccd3dd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="CloseButton" layoutX="151.0" layoutY="247.0" mnemonicParsing="false" onAction="#Close" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #2f3136;" text="Закрити" textFill="#ccd3dd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox alignment="CENTER" layoutX="100.0" layoutY="287.0" prefHeight="49.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="InfoLabal" textFill="#36393f" />
+               </children>
+            </HBox>
+            <Button fx:id="LoginButton" layoutX="277.0" layoutY="247.0" mnemonicParsing="false" onAction="#SwitchToLogin" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #2f3136;" text="Увійти" textFill="#ccd3dd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Увійти як адміністратор" />
+               </tooltip>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

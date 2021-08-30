@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="ParentContainer" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tomyoll.AddProduct.AddOtherController">
+   <children>
+      <AnchorPane fx:id="MainPane" minHeight="800.0" minWidth="1000.0" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #36393f;" stylesheets="@../styles/AddProductScene.css">
+         <children>
+            <ToolBar layoutY="6.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #2f3136;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                  <Button fx:id="BackButton" mnemonicParsing="false" onAction="#SwitchScene" style="-fx-background-color: #7289da;" text="Назад" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+              </items>
+            </ToolBar>
+            <Label fx:id="ErrorField" layoutX="376.0" layoutY="743.0" text="Обов'язкові пункти не заповнені" textFill="#36393f">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <HBox fx:id="ColumnBox" layoutX="6.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" minWidth="250.0" prefHeight="200.0" prefWidth="0.0" spacing="100.0">
+                     <children>
+                        <Label text="Додати категорію" textFill="#8e9297">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="AddCategoryField" minWidth="177.0" style="-fx-background-color: #2f3136;" />
+                      <Button fx:id="AddCategory" minWidth="177.0" mnemonicParsing="false" onAction="#AddCategory" style="-fx-background-color: #7289da;" text="Додати" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" minWidth="250.0" prefHeight="200.0" prefWidth="0.0" spacing="100.0">
+                     <children>
+                        <Label text="Додати захворювання" textFill="#8e9297">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="AddDiseaseField" minWidth="222.0" style="-fx-background-color: #2f3136;" />
+                        <MenuButton fx:id="ChoseCategory" minWidth="222.0" mnemonicParsing="false" style="-fx-background-color: #7289da;" text="Виберіть категорію" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" minWidth="250.0" prefHeight="200.0" prefWidth="0.0" spacing="100.0">
+                     <children>
+                        <Label fx:id="AddingredientLabel" text="Додати інгредієнт" textFill="#8e9297">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="AddIngredientField" minWidth="177.0" onAction="#Addingredient" style="-fx-background-color: #2f3136;" />
+                        <Button fx:id="AddIngredientButton" minWidth="177.0" mnemonicParsing="false" onAction="#Addingredient" style="-fx-background-color: #7289da;" text="Додати" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" minWidth="250.0" prefHeight="200.0" prefWidth="0.0" spacing="100.0">
+                     <children>
+                        <Label text="Додати дію на організм" textFill="#8e9297">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="AddActionField" minWidth="235.0" style="-fx-background-color: #2f3136;" />
+                        <Button fx:id="AddActionButton" minWidth="222.0" mnemonicParsing="false" onAction="#AddAction" style="-fx-background-color: #7289da;" text="Додати" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

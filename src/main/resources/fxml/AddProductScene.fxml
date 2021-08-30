@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="ParrentContainer" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tomyoll.AddProduct.AddProductController">
+   <children>
+      <AnchorPane fx:id="MainPane" minHeight="800.0" minWidth="1000.0" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: #36393f;" stylesheets="@../styles/AddProductScene.css">
+         <children>
+            <ToolBar layoutY="6.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #2f3136;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <Button fx:id="DoneButton" mnemonicParsing="false" style="-fx-background-color: #7289da;" text="Додати" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="AddOtherButton" mnemonicParsing="false" onAction="#SwithContent" style="-fx-background-color: #7289da;" text="Додати інше" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+              </items>
+            </ToolBar>
+            <HBox alignment="CENTER" layoutX="211.0" layoutY="50.0" prefHeight="100.0" prefWidth="579.0" spacing="50.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="10.0" />
+            <VBox fx:id="LabelColumn" alignment="CENTER_LEFT" layoutX="14.0" layoutY="57.0" spacing="60.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Label text="Назва: *" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Склад: *" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="За захворюванням: *" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Дія на оргазізм: *" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="Зображення: *" textFill="#8e9297">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="DragPane" onDragDropped="#DragDroppedHandler" onDragExited="#DragExited" onDragOver="#DragOverHandler" prefHeight="200.0" prefWidth="330.0" style="-fx-background-color: #2f3136;">
+                     <children>
+                        <Label fx:id="DragLabel" alignment="CENTER" layoutX="2.0" layoutY="44.0" text="Або перетягніть сюди" textFill="#8e9297" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ChoseLabel" alignment="CENTER" layoutX="29.0" layoutY="16.0" text="Оберіть файл" textFill="#8e9297" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="135.0" layoutY="82.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Pane fx:id="PlusBox" onMouseClicked="#ChooseFile" prefHeight="60.0" prefWidth="60.0">
+                                 <children>
+                                    <Line fx:id="HorizontalLine" endX="30.0" layoutX="30.0" layoutY="30.0" startX="-30.0" stroke="#8e9297" strokeLineCap="ROUND" strokeWidth="2.0" />
+                                    <Line fx:id="VerticalLine" endX="30.0" layoutX="30.0" layoutY="30.0" rotate="-90.0" startX="-30.0" stroke="#8e9297" strokeLineCap="ROUND" strokeWidth="2.0" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <Label fx:id="FileTypeLabel" layoutX="14.0" layoutY="154.0" text=".png або .jpg файли " textFill="#8e9297" />
+                        <Label fx:id="FileSizeLabel" layoutX="14.0" layoutY="178.0" text="Не більше 220х400 px" textFill="#8e9297" />
+                     </children></AnchorPane>
+               </children>
+            </VBox>
+            <VBox fx:id="ChoiceColumn" alignment="CENTER_LEFT" layoutX="282.0" layoutY="50.0" prefHeight="381.0" prefWidth="187.0" spacing="60.0" AnchorPane.bottomAnchor="359.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <TextField id="NameField" fx:id="NameField" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #2f3136;">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <MenuButton id="StructureList" fx:id="StructureList" accessibleText="T" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #7289da;" text="складові" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+                  <MenuButton fx:id="DiseaseList" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #7289da;" text="захворювання" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+                  <MenuButton fx:id="ActionList" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #7289da;" text="Дії" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MenuButton>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" fillHeight="false" layoutX="501.0" layoutY="622.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="PreviewPane" prefHeight="330.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="7.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="PreviewTitle" alignment="CENTER" contentDisplay="CENTER" text="Попередній перегляд">
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutY="223.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label fx:id="NameLabel" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Label fx:id="ErrorField" layoutX="376.0" layoutY="743.0" text="Обов'язкові пункти не заповнені" textFill="#36393f">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

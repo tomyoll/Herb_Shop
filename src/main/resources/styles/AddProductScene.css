@@ -1,0 +1,33 @@
+.text-field {
+	-fx-text-fill: white;
+}
+.context-menu {
+-fx-background-color: #36393f;
+}
+
+.menu-item:focused{
+-fx-background-color: #23272a;
+}
+
+.check-box > .box {
+	-fx-background-color: #23272a;
+}
+
+.check-box:hover > .box {
+	//-fx-background-color: #36393f;
+	-fx-border-color: #7289da;
+}
+
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+
+    -fx-background-color:  #7289da;
+}
+
+.menu-button > .arrow-button > .arrow {
+	-fx-background-color: white;
+}
+
+
+
